@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300);
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #263238;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+.widget-container {
+  width: 612px;
+  height: 412px;
+  display: block;
+  background-color: #313e45;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+/* Widget 4 Quarter Division here */
+.top-left {
+  height: 60%;
+  width: 50%;
+  padding: 55px 0 0 70px;
+  display: inline-block;
+}
+
+.top-right {
+  height: 60%;
+  width: 50%;
+  float: right;
+  padding: 55px 0 0 0;
+}
+
+.bottom-left {
+  height: 40%;
+  width: 45%;
+  float: left;
+  margin: 0;
+  padding: 40px 0 0 50px;
+}
+
+.bottom-right {
+  height: 40%;
+  width: 55%;
+  float: right;
+  padding: 25px 0 0 60px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Top-left Div CSS */
+
+#city {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+#day {
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 18px;
+}
+
+#date {
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+#time {
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.top-left > a {
+  text-decoration: none;
+  color: white;
+}
+
+.top-left > a:hover {
+  color: #b0bec5;
+}
+
+
+/* Top-Right Div CSS */
+
+#weather-status {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.top-right > img {
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 15px auto 0 auto;
+}
+
+
+/* Horizontal-Half-divider */
+
+.horizontal-half-divider {
+  width: 100%;
+  height: 3px;
+  margin-top: -5px;
+  background-color: #263238;
+}
+
+.vertical-half-divider {
+  width: 3px;
+  position: absolute;
+  height: 167px;
+  background-color: #263238;
+  float: right;
+  display: inline-block;
+  padding: 0;
+}
+
+
+/* Bottom-left CSS */
+
+#temperature,
+#celsius,
+#temp-divider,
+#fahrenheit {
+  display: inline;
+  vertical-align: middle;
+}
+
+#temperature {
+  font-size: 60px;
+  font-weight: 800;
+  margin-right: 5px;
+}
+
+#celsius {
+  margin-right: 10px;
+}
+
+#fahrenheit {
+  margin-right: 5px;
+  color: #b0bec5;
+}
+
+#celsius,
+#temp-divider,
+#fahrenheit {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#celsius:hover,
+#fahrenheit:hover {
+  cursor: pointer;
+}
+
+
+
+
+/* Bottom-Right CSS */
+
+.other-details-key {
+  float: left;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.other-details-values {
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 40px;
+}
+
+.watermark-link {
+  text-decoration:none;
+  color:#b0bec5;
+}
+
+.watermark-link:hover {
+  color:white;
+  text-decoration:none;
+}
+
+.watermark {
+  margin-top:10px;
+  text-align:center;
+  font-weight:400;
+}

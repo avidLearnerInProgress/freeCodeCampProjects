@@ -1,0 +1,43 @@
+.main-card {
+    width: 600px;
+    margin: 10px auto;
+}
+#search {
+    display: none;
+}
+html, body {
+    background-color: #58a2e2 !important;
+    height: 100%;
+}
+md-list-item {
+    background: rgb(204, 233, 249);
+    margin: 8px;
+    border-radius: 2px;
+    padding: 16px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+}
+.md-list-item-text {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+}
+.md-list-item-text h3, p {
+    margin: 0px !important;
+    padding: 2px 0;
+}
+p {
+    color: rgba(0, 0, 0, 0.57);
+}
+.container {
+    max-width: 780px;
+    margin: 0px auto;
+}
+md-input-container.md-block {
+    display: inline-block !important;
+    width: 480px;
+    margin: 16px 0 -8px 0;
+}
+md-chips .md-chips {
+    box-shadow: none !important;
+    opacity: 0.57;
+}

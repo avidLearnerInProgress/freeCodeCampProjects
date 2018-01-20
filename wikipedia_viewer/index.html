@@ -1,0 +1,68 @@
+<html lang="en" ng-app="myWikiApp">
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+            <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js">
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js">
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js">
+            </script>
+            <link href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js">
+            </script>
+            <script src="app.js" type="text/javascript">
+            </script>
+            <link href="style.css" rel="stylesheet" type="text/css">
+        </meta>
+    </head>
+    <body ng-cloak="" ng-controller="myWikiController">
+        <div style="height:20px">
+        </div>
+        <div class="main-card" style="text-align: center; font-size: 24px; color: rgba(255, 255, 255, 0.87);">
+            <md-card-title layout-align="center">
+                Wikipedia Viewer
+            </md-card-title>
+        </div>
+        <md-card class="main-card">
+            <md-card-actions layout="row" layout-align="center" ng-hide="showSearch">
+
+                <md-button class="md-raised md-primary" ng-click="" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+                    RANDOM
+                </md-button>
+
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;
+
+                <!--/Special:Random is provided by wikipedia, it returns random article url.-->
+                <md-button class="md-raised md-primary" ng-click="showSearch = !showSearch">
+                    SEARCH
+                </md-button>
+                <!--showSearch : toggle functionality-->
+
+            </md-card-actions>
+            <div ng-show="showSearch" style="width: 100%; margin: 0px 8px;">
+                <form id="searchform" name="searchform" ng-submit="serachURL()">
+                    <md-input-container class="md-block" md-no-float="">
+                        <input ng-model="this.query" placeholder="Enter your query">
+                            <!-- this corresponds to $scope -->
+                        </input>
+                    </md-input-container>
+                    <md-button class="md-raised md-primary" ng-click="showSearch = !showSearch" onclick="angular.element($('#res')).html('')">
+                        BACK
+                    </md-button>
+                    <!--angular.element() : Wraps a raw DOM element or HTML string as a jQuery element.
+          Clicking on the search button gives a search bar with back button.
+        -->
+                </form>
+            </div>
+
+        </md-card>
+        <div class="container">
+            <md-list flex="" id="res">
+            </md-list>
+        </div>
+    </body>
+</html>

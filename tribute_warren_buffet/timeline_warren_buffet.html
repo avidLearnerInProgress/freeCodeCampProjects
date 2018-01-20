@@ -1,0 +1,428 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<style>
+body {
+  font-family: helvetica;
+}
+/*——————————————
+TimeLine CSS
+———————————————*/
+/* Base */
+
+#content {
+  margin-top: 50px;
+  text-align: center;
+}
+
+section.timeline-outer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1.header {
+  font-size: 50px;
+  line-height: 70px;
+}
+/* Timeline */
+
+.timeline {
+  border-left: 8px solid #42A5F5;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #333;
+  margin: 50px auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  padding: 20px;
+  list-style: none;
+  text-align: left;
+}
+
+.timeline h1,
+.timeline h2,
+.timeline h3 {
+  font-size: 1.4em;
+}
+
+.timeline .event {
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline .event:before {
+  left: -177.5px;
+  color: #212121;
+  content: attr(data-date);
+  text-align: right;
+  /*  font-weight: 100;*/
+  
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.timeline .event:after {
+  box-shadow: 0 0 0 8px #42A5F5;
+  left: -30px;
+  background: #212121;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+/**/
+/*——————————————
+Responsive Stuff
+———————————————*/
+
+@media (max-width: 945px) {
+  .timeline .event::before {
+    left: 0.5px;
+    top: 20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .timeline h3 {
+    font-size: 16px;
+  }
+  .timeline p {
+    padding-top: 20px;
+  }
+  section.lab h3.card-title {
+    padding: 5px;
+    font-size: 16px
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline .event::before {
+    left: 0.5px;
+    top: 20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .timeline .event:nth-child(1)::before,
+  .timeline .event:nth-child(3)::before,
+  .timeline .event:nth-child(5)::before {
+    top: 38px;
+  }
+  .timeline h3 {
+    font-size: 16px;
+  }
+  .timeline p {
+    padding-top: 20px;
+  }
+}
+/*——————————————
+others
+———————————————*/
+
+a.portfolio-link {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+</style>
+
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">The Oracle Of Omaha</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                   <a class="mdl-navigation__link" target="_blank" href="https://codepen.io/maniAC96/full/zEXLGy/">About</a>
+                    <a class="mdl-navigation__link is-active" href="#" >Timeline</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+               <a class="mdl-navigation__link" target="_blank" href="https://codepen.io/maniAC96/full/zEXLGy/">About</a>
+               <a class="mdl-navigation__link is-active"  href="#">Timeline</a>
+               <!-- <a class="mdl-navigation__link" href="contact.html">Contact</a>-->
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <section id="timeline" class="timeline-outer">
+                    <div class="container" id="content">
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                            <h1 class="blue-text lighten-1 header">Evolution of Warren Buffett’s Career from 1936 to 2013</h1>
+                            <ul class="timeline">
+                            <li class="event" data-date="1936 – Age 6">
+                                <p>
+                                   Buffett started selling Juicy Fruit chewing gum packs. When asked for 1 piece, he would not sell as he thought he may be left with 4 pieces he could not sell. He made 2 cents profit per pack.
+                                </p><p>
+                                Buffett would also purchase Coca-Cola six packs for 25 cents from his grandfather’s grocery store – Buffett and Son. He would sell each Coke for 5 cents. Profit of 5 cents per pack.
+                                </p>
+                            </li>
+                            <li class="event" data-date="1941 – Age 11">
+                                <p>
+                                At 11 years old, Buffett buys his first stock – 6 shares of Cities Service (now known as CITGO – an Oil company) at $38 per share. He bought 3 for himself and 3 for his sister Doris.</p><p>That is all the money he had at that time. Practiced little to no diversification at a young age which he continued to do throughout his investment career. The stock price fell to $27 but soon went to $40. He sold the stock at $40, but, the stock shot up to $202 in the next few years.
+                                </p>
+                            </li>
+                            <li class="event" data-date="1943 – Age 13">
+                                
+                                <p>Buffett files his first tax return and deducts his bike as a work expense for $35.
+                                </p>
+                            </li>
+                            <li class="event" data-date="1945 – Age 15">
+                            
+                                <p>Buffett makes $175 a month selling Washington Post newspapers and saves $1200 to buy a 40 acre farmland in Omaha, Nebraska.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1949 – Age 19">
+                                <p>Buffett’s savings reaches $9800.He joins Columbia University and learns from Benjamin Graham. He was willing to work for Benjamin Graham, even for free, but was not offered a job.</p><p>Buffett returned to Omaha, purchased a Texaco station, but did not go well. He was also working as an investment salesman for Buffett-Falk & Company, at his father’s brokerage firm.In 1954, Benjamin Graham called him again and offered him a job for $12,000 a year. During this period, Buffett was able to also work closely with Walter Schloss.</p>
+                            </li>
+
+
+                            <li class="event" data-date="1956 – Age 26">
+                            
+                                <p>Graham decides to retire and fold his business. Buffett’s savings have grown from $9,800 to $140,000.Buffett returned to Omaha and on May 1, created Buffett Associates Ltd. Seven family members and friends invest a total of $105k. Buffett invested only $100k.
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1957 – Age 27">
+                            
+                                <p>Buffett created more partnerships and was managing a total of 5 partnerships, all from his home.
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1959 – Age 29">
+                            
+                                <p>Buffett was introduced to Charlie Munger by his friend Edwin Davis at a dinner. Charlie Munger later becomes the Vice Chairman of Berkshire Hathaway.
+                                </p>    
+                            </li>
+
+                            <li class="event" data-date="1961 – Age 31">
+                            
+                                <p>Buffett is running seven partnerships by 1961; Buffett Associates, Buffett Fund, Dacee, Emdee, Glenoff, Mo-Buff, and Underwood.The partnerships are worth a few million and Buffett made his first million dollar investment in Dempster – a windmill manufacturing company.</p>
+                                <p>
+                                Sanborn Map Company accounted for 35% of the partnerships’ assets. He explained to the partners that in 1958 Sanborn was selling at $45 per share when the value of its investment portfolio itself was at $65 per share which meant that it was undervalued by $20 per share with a map business coming in for nothing.</p>
+                            </li>
+
+                            <li class="event" data-date="1962 – Age 32">
+                            
+                                <p>Buffett goes to New York to meet his old acquaintances to include more partners and raise capital. He collects a few hundreds of thousand dollars. Buffett partnerships is worth $7.2 million. Buffett then merges all partnerships into one and rename it as Buffett Partnerships Ltd.</p>
+                                <p>Munger introduces Buffett to Harry Bottle, CEO of Dempster,  who cut costs, laid off workers, and turned around Dempster to generate cash. At this time, Buffett notices Berkshire Hathaway selling for $8 a share and starts buying aggressively.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1963 – Age 33">
+                            
+                                <p>Buffett sells Dempster for a $2.3 million gain, 3x times the invested amount.Buffett aggressively purchases Berkshire paying $14.86 per share while the company had working capital of $19 per share. This did not include the value of fixed assets. Buffett partnership becomes a single largest shareholder of Berkshire Hathaway.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1965 – Age 35">
+                            
+                                <p>Buffett invests $4 million in Walt Disney after a meeting with Walt Disney himself which is almost 5% of the company. Buffett takes full control of Berkshire Hathaway and names Ken Chase to be the CEO.
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1967 – Age 37">
+                            
+                                <p>Buffett Partnership now owns 59.5% of Berkshire Hathaway. Berkshire Hathaway pays a 10 cent dividend. This is the first and only dividend it has paid ever.The Partnership is worth $65 million. Buffett’s personal investment is $10 million. Buffett tells his partners that in the current raging bull market he is unable to find good investments.
+                                </p><p>He also briefly considered leaving investing to pursue other interests.American Express hits $180, making a $20 million profit on $13 million investment.Berkshire Hathaway acquires National Indemnity Insurance for $8.6 million.Berkshire acquires National Fire and Marine Insurance Company.
+                                </p>
+                            </li>
+
+
+
+                            <li class="event" data-date="1973 – Age 43">
+                            
+                                <p>Berkshire starts buying stocks in the Washington Post company (Publishing). Buffett becomes close friends with Katharine Graham who controlled the company and its flagship newspaper and becomes a member of the board of directors.
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1974 – Age 44">
+                            
+                                <p>Due to falling stock prices, the value of Berkshire Hathaway portfolio begins to fall. Warren’s personal network falls by more than 50%.
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1976 – Age 46">
+                            
+                                <p>Berkshire invests $4 million in GEICO (Insurance) when its stock price was just above $2. Buffett continually invests in GEICO until 1996, when Berkshire acquires the company.Berkshire’s subsidiary, National Fire and Marine Insurance Company, acquires Central Fire & Casualty Company, and Cypress Insurance Company.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1979 – Age 49">
+                            
+                                <p>Berkshire is trading at $290 per share.Warren’s personal net worth is now approximately $100 million and receives a $50k annual salary.Berkshire starts to buy shares in General Foods (Foods), Handy & Harman (Metals and Mining), Affiliated Publications (Publishing), Media General (Publishing), FW Woolworth (Retail), Amerada Hess (Oil), Precision Steel Warehouse (Materials and Construction).
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1980 – Age 50">
+                            
+                                <p>Berkshire buys stock in RJ Reynolds (Tobacco), ALCOA (Metals and Mining), Pinkerton (Professional Services), Cleveland-Cliffs Iron (Metals and Mining), National Detroit (Banking), Times Mirror (Publishing), National Student Marketing (Financial Services).
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1983 – Age 53">
+                            
+                                <p>Berkshire merges with Blue Chip Stamps which was a majority owned subsidiary of Berkshire.Berkshire Hathaway purchases Nebraska Furniture Mart (Furniture) for $60 million.</p><p>
+                                Berkshire portfolio is worth $1.3 billion.Begins with a stock price of $775 and ends the year at $1310.Warren’s personal net worth has ballooned to $620 million and he makes the Forbes millionaire list for the first time.
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1985 – Age 55">
+                            
+                                <p>Buffett shuts down Berkshire Hathaway’s textile business.He helps merge ABC TV Network and Capital Cities (Communications). Buffett is forced to leave the board of Washington Post, as the legislation prohibited him from sitting on the boards of both Capital Cities and Washington Post.Berkshire purchases Scott and Fetzer who boast products like Kirby vacuums and World Book Encyclopedia. Also buys Fecheimer Brothers (Uniform company) and Beatrice (Food).
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1988 – Age 58">
+                            
+                                <p>Buffett starts buying Coca-Cola (Beverages) and eventually gains a 7% stake in the company for $1.2 billion.Berkshire buys Freddie Mac (Financial Services).
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1985 – Age 55">
+                            
+                                <p>Buffett shuts down Berkshire Hathaway’s textile business.He helps merge ABC TV Network and Capital Cities (Communications). Buffett is forced to leave the board of Washington Post, as the legislation prohibited him from sitting on the boards of both Capital Cities and Washington Post.Berkshire purchases Scott and Fetzer who boast products like Kirby vacuums and World Book Encyclopedia. Also buys Fecheimer Brothers (Uniform company) and Beatrice (Food).
+                                </p>
+                            </li>
+
+
+                            <li class="event" data-date="1992 – Age 62">
+                            
+                                <p>Berkshire acquires Central States Indemnity Company (Insurance) of Omaha and Buffett continues to serve as interim Chairman at Solomon Brothers.Berkshire becomes the largest shareholder of General Dynamics (Aerospace).Berkshire’s stock shoots past the $10,000 mark.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1994 – Age 64">
+                            
+                                <p>The Warren Buffett Way by Robert G. Hagstrom Jr. is published and becomes a bestseller.
+                                Berkshire invests in McDonald’s (Restaurants), Gannett (Publishing) and PNC Bank (Banking).
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="2000 – Age 70">
+                            
+                                <p>Buffett is still going strong.Berkshire acquires a long list of companies.
+                                <ul>    
+                                    <li>Ben Bridge (Jewelry)</li>
+                                    <li>CORT, the leading national provider of rental furniture, accessories and related services in the growing “rent-to-rent” furniture rental industry.
+                                    </li>
+                                    <li>Justin Industries including Acme Building Brands.</li>
+                                    <li>Shaw Industries, the world’s largest manufacturer of tufted broadloom carpets.</li>
+                                    <li>Benjamin Moore, a leading manufacturer and retailer of premium paints, stains and industrial coatings that was founded in 1883.</li>
+                                </ul>
+                                </p>
+                                <p>
+                                Buffett is named the top money manager of the 20th century in a survey by the Carson Group, ahead of Peter Lynch and John Templeton.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="2004 – Age 74">
+                                <p>
+                                    Bill Gates is elected as a director for Berkshire Hathaway.
+                                </p>
+                                    
+                            </li>
+
+                            <li class="event" data-date="2006 – Age 76">
+                            
+                                <p>Buffett announces in June that he will give away more than 80%, or about $37 billion, of his $44 billion fortune to five foundations in annual gifts of stock, starting July 2006. The largest contribution will go to the Bill and Melinda Gates Foundation.Berkshire stock crosses $100,000 per share.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="2008 – Age 78">
+                            
+                                <p>Berkshire buys out Marmon Holdings and Coachmen Industries becomes a part of Forest River (leisure vehicles).
+                                Berkshire buys $4.4b in bonds from Mars Inc (food and beverage). Makes $680m in profit off the investment.
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="2010 – Age 80">
+                            
+                                <p>Berkshire buys out railroad company Burlington Northern for $44 billion. As a result of the acquisition, Berkshire enters the S&P 500, replacing Burlington Northern Santa Fe.Berkshire subsidiary, McLane Company, acquires Kahn Ventures.Berkshire invests in Munich Re (Insurance).
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="2013 – Age 83">
+                            
+                                <p>Berkshire acquires a 50% stake in H. J. Heinz Company (Food and Beverage).
+                                </p>
+                            </li>
+
+                            <li class="event" data-date="1992 – Age 62">    
+                                <div style="display: flex; justify-content: center;">
+                                <figure>
+                                <img src="https://www.dropbox.com/s/1cyaazp170wdupc/berkshire-2013.jpg?raw=1"/>
+                                <figcaption align="middle">Berkshire is Worth $176,140</figcaption>
+                                </figure>
+                                </div>
+                            </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+
+
+
+           <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">&copy; Chirag Shah</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="https://github.com/avidLearnerInProgress" target="_blank">Github</a></li>
+                        <li><a href="https://linkedin.com/in/chirag-shah" target="_blank">Linkedin</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

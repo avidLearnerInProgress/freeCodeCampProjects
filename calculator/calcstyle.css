@@ -1,0 +1,242 @@
+body {
+  background-color: rgb(255, 255, 102);
+  animation-delay: 10
+}
+
+#main {
+  width: 300px;
+  height: 0px;
+  z-index: 3;
+  position: center;
+  overflow: hidden;
+  display: inline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+
+.controls {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #636363;
+  color: #D5D5D5;
+  
+}
+
+.controls .md-button {
+  
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 64.6px;
+      -ms-flex: 0 0 64.6px;
+          flex: 0 0 64.6px;
+  margin: 0px !important;
+  border-radius: 2px !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+
+ 
+}
+
+.input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  background-color: #434343;
+  color: #FDFDFD;
+}
+
+.input .md-button {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33%;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  height: 100px;
+  margin: 0px !important;
+  font-size: 24px;
+}
+
+.disp {
+  padding: 20px 20px;
+  font-size: 36px;
+  text-align: right;
+  color: #737373;
+  background-color: rgb(250, 250, 250);
+  border: 0px !important;
+  width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.result {
+  padding: 2px 15px;
+  margin-bottom: 10px;
+  margin-right:3px;
+  font-size: 34px;
+  height: 40px;
+  text-align: right;
+  color: #8E8E8E;
+  top: 0;
+  position: relative;
+  background-color: rgb(250, 250, 250);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.adv {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  right: -280px;
+  -webkit-transition: 0.5s cubic-bezier(.35, 0, .25, 1);
+  transition: 0.5s cubic-bezier(.35, 0, .25, 1);
+  background-color: #1DE9B6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adv .md-button {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33%;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  height: 80px;
+  margin: 0px !important;
+
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 400;
+  color: rgb(70, 70, 70);
+}
+
+.adv:hover {
+  -webkit-transition: 0.5s cubic-bezier(.35, 0, .25, 1);
+  transition: 0.5s cubic-bezier(.35, 0, .25, 1);
+  right: 0px;
+}
+
+md-divider {
+  border-top-color: rgb(250, 250, 250) !important;
+}
+
+.circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 32px;
+  border-radius: 50%;
+  background-color: rgb(140, 158, 255);
+  -webkit-animation: ripple 1s;
+          animation: ripple 1s;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  will-change: opacity;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(18);
+            transform: scale(18);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(18);
+            transform: scale(18);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(18);
+            transform: scale(18);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(18);
+            transform: scale(18);
+    opacity: 0;
+  }
+}
+.info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+}

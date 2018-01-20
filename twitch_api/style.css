@@ -1,0 +1,15 @@
+#buttons{
+  margin: 0px auto 10px auto;
+}
+
+button {
+  margin: auto 20px;
+}
+
+.online, .show-online {
+  background-color: #defce0;
+}
+
+.offline, .show-offline {
+  background-color: #fcdede;
+}

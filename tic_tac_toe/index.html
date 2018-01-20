@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link href="styles/ui.css" rel="stylesheet" type="text/css">
+        </link>
+    </head>
+    <body>
+        <div class="main-container">
+            <div id="res">
+                <div>
+                    Instructions: First chose difficulty, then click start.
+      If you want to change difficulty click difficulty chosen then restart.
+                </div>
+                <br>
+                    <button class="btn btn-danger" id="restart">
+                        Restart
+                    </button>
+                    <div id="test">
+                    </div>
+                </br>
+            </div>
+            <div class="board">
+                <!-- data-indx following cell divs represents cell index in 1D array representation -->
+                <div class="cell" data-indx="0">
+                </div>
+                <div class="cell" data-indx="1">
+                </div>
+                <div class="cell" data-indx="2">
+                </div>
+                <div class="cell" data-indx="3">
+                </div>
+                <div class="cell" data-indx="4">
+                </div>
+                <div class="cell" data-indx="5">
+                </div>
+                <div class="cell" data-indx="6">
+                </div>
+                <div class="cell" data-indx="7">
+                </div>
+                <div class="cell" data-indx="8">
+                </div>
+            </div>
+            <div class="control">
+                <!-- div.intial displays the starting controls -->
+                <div class="intial">
+                    <div class="difficulty">
+                        <button class="btn btn-success btn-lg" id="blind">
+                            Novice!
+                        </button>
+                        <button class="btn btn-danger btn-lg" id="master">
+                            Master!
+                        </button>
+                    </div>
+                    <div class="start">
+                        Start
+                    </div>
+                </div>
+                <div class="ingame" id="won">
+                    You won !
+                </div>
+                <div class="ingame" id="lost">
+                    You lost !
+                </div>
+                <div class="ingame" id="draw">
+                    It's a Draw
+                </div>
+            </div>
+        </div>
+        <script src="scripts/jquery-1.10.1.min.js">
+        </script>
+        <script src="scripts/__game.js">
+        </script>
+    </body>
+</html>

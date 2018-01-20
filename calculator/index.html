@@ -1,0 +1,123 @@
+<html lang="en" ng-app="CalcApp">
+<!--Start head -->
+<head>
+  <link rel="stylesheet" href="devices.min.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500|Material+Icons" rel="stylesheet" />
+  <link href="./calcstyle.css" rel="stylesheet" />
+</head>
+<!--End head-->
+
+<!--Start body-->
+<body ng-cloak layout='column' layout-align='center center' ng-controller='calcCtrl'>
+  <!--Start main div-->
+  <div align="center" height="768" width="400">
+    <div style="position:relative;align-content: center;" class="marvel-device nexus5">
+      <div class="top-bar"></div>
+      <div class="sleep"></div>
+      <div class="volume"></div>
+      <div class="camera"></div>
+
+      <!--Start screen-->
+      <div class="screen">
+        <!--Start md card-->
+        <md-card id='main' class='md-whiteframe-z4'>
+          <input class='disp' id='inp' ng-model='expr' type='text' ng-keyup='$scope.getRes();' />
+          <md-divider></md-divider>
+          <div class='result'>{{result}}</div>
+          <div ng-if='aclick' ng-init='aclick=false' class='circle'>
+          </div>
+          <div class='panel'>
+            <div class='input'>
+              <md-button class='md-icon-button seven' ng-click='expr = expr + 7'>7</md-button>
+              <md-button class='md-icon-button eight' ng-click='expr = expr + 8'>8</md-button>
+              <md-button class='md-icon-button nine' ng-click='expr = expr + 9'>9</md-button>
+              <md-button class='md-icon-button four' ng-click='expr = expr + 4'>4</md-button>
+              <md-button class='md-icon-button five' ng-click='expr = expr + 5'>5</md-button>
+              <md-button class='md-icon-button six' ng-click='expr = expr + 6'>6</md-button>
+              <md-button class='md-icon-button one' ng-click='expr = expr + 1'>1</md-button>
+              <md-button class='md-icon-button two' ng-click='expr = expr + 2'>2</md-button>
+              <md-button class='md-icon-button three' ng-click='expr = expr + 3'>3</md-button>
+              <md-button class='md-icon-button dot' ng-click="expr = expr + '.'"> . </md-button>
+              <md-button class='md-icon-button zero' ng-click='expr = expr + 0'>0</md-button>
+              <md-button class='md-icon-button equal' ng-click='getRes()'>=</md-button>
+            </div>
+            <div class='controls'>
+              <md-button ng-click=" aclick=!aclick; ac();">AC</md-button>
+              <md-button ng-click="clear()">CLR</md-button>
+              <md-button ng-click="expr = expr + ' / '"> / </md-button>
+              <md-button ng-click="expr = expr + ' * '"> X </md-button>
+              <md-button ng-click="expr = expr + ' - '"> - </md-button>
+              <md-button ng-click="expr = expr + ' + '"> + </md-button>
+            </div>
+            <div class='adv' md-whiteframe='z1'>
+              <md-button class='md-icon-button ' ng-click="expr = expr + 'sin('">sin</md-button>
+              <md-button class='md-icon-button ' ng-click="expr = expr + 'cos('">cos</md-button>
+              <md-button class='md-icon-button ' ng-click="expr = expr + 'tan('">tan</md-button>
+              <md-button class='md-icon-button ' ng-click="expr = expr + 'log('">ln</md-button>
+              <md-button class='md-icon-button ' ng-click="expr = expr + 'log10('">log</md-button>
+              <md-button class='md-icon-button ' ng-click="expr = expr + '!'">!</md-button>
+              <md-button class='md-icon-button ' ng-click="expr = expr + 'PI'">&Pi;</md-button>
+              <md-button class='md-icon-button ' ng-click="expr = expr + 'e'">e</md-button>
+              <md-button class='md-icon-button three' ng-click="expr = expr + '^'">^</md-button>
+              <md-button class='md-icon-button dot' ng-click="expr = expr + '('">(</md-button>
+              <md-button class='md-icon-button zero' ng-click="expr = expr + ')'">)</md-button>
+              <md-button class='md-icon-button equal' ng-click="expr = expr + 'sqrt('">sqrt</md-button>
+            </div>
+          </div>
+        </md-card> <!--End md card-->
+      </div> <!--End screen-->
+    </div> <!-- End main div -->
+  </div>
+<!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.4.1/math.min.js"></script>
+    <script type='text/javascript'>
+      var app = angular.module('CalcApp', ['ngMaterial', 'ngAnimate']);
+      app.controller('calcCtrl', function($scope, $timeout, $rootScope) {
+        $scope.aclick = false;
+        $scope.expr = '';
+        $scope.result = '';
+    $scope.getRes = function() {
+      try {
+        if ($scope.expr != '') {
+          $scope.result = math.round(math.eval($scope.expr), 8);
+        } else {
+          $scope.result = '';
+        }
+      } catch (e) {
+        $scope.result = 'Error';
+      }
+    };
+    $scope.ac = function() {
+      $timeout(function() {
+        $scope.expr = '';
+        $scope.result = '';
+        $scope.aclick = false;
+      }, 500);
+    };
+    $scope.clear = function() {
+      if ($scope.expr.substr(-1) == ' ') {
+        $scope.expr = $scope.expr.slice(0, -2);
+      } else {
+        $scope.expr = $scope.expr.slice(0, -1);
+      }
+    };
+    $("#inp").keypress(function(e) {
+      if (e.keyCode == 13) {
+        $scope.getRes();
+      }
+    });
+  });
+    </script>
+<!--End Scripts-->
+</body>
+<!--End body-->
+</html>
+					
