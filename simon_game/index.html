@@ -1,0 +1,47 @@
+<html ng-app="simonApp">
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./style.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="./app.js"></script>
+</head>
+
+<body>
+  <div ng-controller="simonController">
+    <div class="container text-center">
+      <h1>Simon Game</h1>
+      <h2>FCC Project</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="gamefield">
+            <div class="top-row">
+              <button type="button" class="btn btn-default change-color" id="red" style="background:{{red}}" ng-click="addToPlayer('red')"><audio id="audiored" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" autostart="false"></audio></button>
+            </div>
+            <div class="middle-row">
+              <button type="button" class="btn btn-default change-color" id="blue" style="background:{{blue}}" ng-click="addToPlayer('blue')"><audio id="audioblue" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" autostart="false"></audio></button>
+              <div class="score">
+                <h2>Score: {{game.score}}</h2>
+                <h3>Current steps: {{game.steps}}</h3>
+              </div>
+              <button type="button" class="btn btn-default change-color" id="green" style="background:{{green}}" ng-click="addToPlayer('green')"><audio id="audiogreen" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" autostart="false"></audio></button>
+            </div>
+            <div class="bottom-row">
+              <button type="button" class="btn btn-default change-color" id="yellow" style="background:{{yellow}}" ng-click="addToPlayer('yellow')"><audio id="audioyellow" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" autostart="false"></audio></button>
+              <button type="button" class="btn btn-default change-color" id="grey" style="background:{{grey}}" ng-click="addToPlayer('grey')"><audio id="audiogrey" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" autostart="false"></audio></button>
+            </div>
+            <div class="last-row">
+              <button type="button" class="btn btn-default navbar-btn" id="play" ng-click="newGame()">Click to play!</button>
+              <button type="button" class="btn btn-default navbar-btn" id="reset" ng-click="reset()">Click to reset!</button>
+              <button type="button" class="btn btn-default navbar-btn" id="strict" ng-click="switchMode()">Strict mode is {{game.strictMode}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+
+
+</html>

@@ -1,0 +1,116 @@
+body {
+  background-image: url("https://i.stack.imgur.com/jGlzr.png");
+  color: white;
+}
+
+.gamefield {
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+.top-row {
+  display: flex;
+  justify-content: center;
+}
+
+.middle-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px auto;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 45px auto;
+}
+
+.last-row {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#reset {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#red {
+  border: 6px solid red;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  }
+
+#blue {
+  border: 6px solid blue;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+
+#green {
+  border: 6px solid green;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+
+#yellow {
+  border: 6px solid yellow;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+
+#grey {
+  border: 6px solid grey;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+
+#red:focus, #blue:focus, #green:focus, #yellow:focus, #grey:focus {
+  outline: 0;
+}
+
+.change-color {
+  transition: 0.5s all;
+}
+
+#red:hover, #red:active {
+  transition: 0.5s all;
+  background-color: red;
+}
+
+#blue:hover, #blue:active {
+  transition: 0.5s all;
+  background-color: blue;
+}
+
+#green:hover, #green:active {
+  transition: 0.5s all;
+  background-color: green;
+}
+
+#yellow:hover, #yellow:active {
+  transition: 0.5s all;
+  background-color: yellow;
+}
+
+#grey:hover, #grey:active {
+  transition: 0.5s all;
+  background-color: grey;
+}
+
+.custom {
+  background-color: white;
+}
