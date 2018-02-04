@@ -23,4 +23,6 @@ You can find the code outputs here.
 
 10. Pomodoro Clock: https://codepen.io/maniAC96/full/rJxyqa/
 
+11. Simon Game: https://codepen.io/maniAC96/full/ZrWrBY/
+
 
